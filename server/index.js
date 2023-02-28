@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // HTTP ROUTER
-app.use('/trips', router)
+app.use('', router)
 
 // SERVE HOME PAGE
 app.use(express.static(path.join(__dirname, '../client/dist')));

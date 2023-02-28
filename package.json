@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npx nodemon --watch server server/index.js",
-    "client": "npx webpack --watch"
+    "client": "npx webpack --watch",
+    "prod": "npx webpack && node server/index.js"
   },
   "repository": {
     "type": "git",

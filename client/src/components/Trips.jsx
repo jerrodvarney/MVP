@@ -21,7 +21,7 @@ const Trips = ({
   return (
     <div id="trips">
       {allTrips && !selected
-        ? allTrips.map(detail => <TripEntry key={detail.startDate} tripDetails={detail} setSelect={setSelect} />)
+        ? allTrips.map((detail, index) => <TripEntry key={index} tripDetails={detail} setSelect={setSelect} />)
         : renderSelected()}
     </div>
   )
