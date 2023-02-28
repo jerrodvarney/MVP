@@ -1,0 +1,289 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ///// AFTER CSS RESET ///// */
+body {
+	background-image: url('images/background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: 'Expletus Sans', cursive;
+}
+
+#main {
+	background-color: #0000004D;
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+#app {
+	height: 100vh;
+	width: 100vw;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/* HEADER */
+
+#header {
+  align-items: center;
+  background-color: #005000E6;
+	border-bottom-right-radius: 5px;
+	border-right: 2px solid #005000E6;
+	border-bottom: 2px solid #005000E6;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  display: flex;
+  height: 75px;
+	justify-content: center;
+  padding: 0 25px;
+	position: absolute;
+	top: 0;
+  width: 250px;
+}
+
+#header:hover {
+  cursor: pointer;
+	border-color: #C5DCA0;
+}
+
+#header:hover #logo {
+	/* text-decoration: underline;
+	text-decoration-thickness: 2px; */
+	text-shadow: 1px 1px 10px #C5DCA080;
+}
+
+#logo {
+	align-items: center;
+	display: flex;
+	color: #C5DCA0;
+  font-family: 'Expletus Sans', cursive;
+  font-size: 3em;
+	text-shadow: 1px 1px 5px #0000004D;
+}
+
+#content {
+	height: 100%;
+	padding: 125px 100px 0;
+	width: 100%;
+}
+
+/* HOME */
+#home {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.home-left {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	width: 50%;
+}
+
+.home-title {
+	animation: fadeIn 5s;
+	color: #C5DCA0;
+  font-family: 'Expletus Sans', cursive;
+  font-size: 225px;
+	margin-left: -50px;
+	text-shadow: 1px 1px 30px #000000;
+}
+
+.home-title span {
+	animation: fadeIn 5s;
+	font-size: 250px;
+	margin-left: 50px;
+}
+
+.home-right {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 70%;
+	justify-content: space-around;
+	width: 50%;
+}
+
+.home-btn {
+  background-color: #005000E6;
+	border: 2px solid #005000E6;
+	border-radius: 5px;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+	color: #C5DCA0;
+	font-family: 'Expletus Sans', cursive;
+	font-size: 2em;
+	height: 100px;
+	text-shadow: 1px 1px 5px #0000004D;
+	width: 50%;
+}
+
+.home-btn:hover {
+	border-color: #C5DCA0;
+	cursor: pointer;
+	text-shadow: 1px 1px 10px #C5DCA080;
+}
+
+/* .my-trips {
+	animation: fadeIn 1s;
+}
+
+.plan-trip {
+	animation: fadeIn 1s;
+} */
+
+
+/* TRIPS */
+#trips {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: space-around;
+	overflow: scroll;
+	padding-bottom: 50px;
+	width: 100%;
+}
+
+/* TRIP ENTRY */
+.trip-entry {
+	animation: fadeIn 1s;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	height: 250px;
+	margin: 25px 0;
+	width: 45%;
+}
+
+.trip-entry:hover {
+	cursor: pointer;
+}
+
+.trip-entry:hover .trip-bottom {
+	border-top: 2px solid #C5DCA0;
+	border-bottom: 2px solid #C5DCA0;
+}
+
+.trip-entry:hover .trip-title {
+	text-shadow: 1px 1px 10px #C5DCA080;
+}
+
+.trip-top {
+	border-radius: 5px 5px 0 0;
+	height: 60%;
+	width: 100%;
+}
+
+.trip-bottom {
+	align-items: center;
+	background-color: #005000E6;
+	border: 1px solid #005000E6;
+	color: #C5DCA0;
+	display: flex;
+	height: 75px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+.trip-title {
+	font-family: 'Expletus Sans', cursive;
+  font-size: 2.5em;
+	text-shadow: 1px 1px 5px #0000004D;
+	text-transform: capitalize;
+	width: 50%;
+}
+
+.date-container {
+	align-items: flex-end;
+	display: flex;
+	justify-content: flex-end;
+	height: 2.5em;
+	width: 50%;
+}
+
+.trip-dates {
+	font-size: 1.25em;
+}
+
+/* TRIP DETAILS PAGE */
+#details {
+	animation: fadeIn 1s;
+	align-items: center;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: space-around;
+	overflow: scroll;
+	padding-bottom: 50px;
+	width: 100%;
+}
+
+/* NEW TRIP */
+#new-trip {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
