@@ -13,7 +13,7 @@ const App = () => {
   const [selected, setSelect] = useState(false);
   const [allTrips, setAllTrips] = useState([]);
 
-  //SECTION RENDER FUNCTIONS
+  // SECTION RENDER FUNCTIONS
   const displayHome = () => {
     if (home) return;
     showNew(false);
@@ -38,14 +38,14 @@ const App = () => {
     showNew(true);
   }
 
-  //HTTP REQUEST HANDLERS
+  // HTTP REQUEST HANDLERS
   const fetchTrips = () => {
     axios.get('http://localhost:3000/trips')
       .then(({ data }) => setAllTrips(data))
       .catch(err => console.error('error fetching all trips: ', err));
   }
 
-  //INITIALIZATION
+  // INITIALIZATION
   useEffect(() => {
     fetchTrips()
   }, []);
@@ -73,6 +73,8 @@ const App = () => {
       />
       <NewTrip
         newTrip={newTrip}
+        displayHome={displayHome}
+        fetchTrips={fetchTrips}
       />
     </div>
   </div>

@@ -4,8 +4,8 @@ DROP TABLE IF EXISTS trips;
 CREATE TABLE trips (
   id SERIAL PRIMARY KEY,
   location VARCHAR(255) NOT NULL,
-  start_date DATE NOT NULL,
-  end_date DATE NOT NULL,
+  start_date VARCHAR(255) NOT NULL,
+  end_date VARCHAR(255) NOT NULL,
   image VARCHAR(255)
 );
 
@@ -38,7 +38,7 @@ CREATE TABLE hotels (
   address TEXT NOT NULL,
   check_in VARCHAR(255) NOT NULL,
   check_out VARCHAR(255) NOT NULL,
-  phone VARCHAR(15) NOT NULL,
+  phone VARCHAR(255) NOT NULL,
   confirmation VARCHAR(255) NOT NULL,
   trip_id INTEGER NOT NULL REFERENCES trips(id)
 );

@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const router = require('./routes');
 const path = require('path');
+const db = require('../db/config.js');
 
 const { PORT } = process.env;
 const app = express();

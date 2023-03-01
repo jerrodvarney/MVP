@@ -4,7 +4,7 @@ const HotelList = ({ hotels }) => {
   return (
     <div className="hotel-list">
       <h3 className="content-title">Hotels / Accomodations</h3>
-      {hotels.length
+      {hotels
         ? hotels.map(hotel => <Hotel hotel={hotel} key={hotel.name} />)
         : <div className="content-placeholder" />}
     </div>

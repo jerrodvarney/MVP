@@ -19,11 +19,15 @@ const Trips = ({
 
   if (!displayTrips) return null;
   return (
-    <div id="trips">
-      {allTrips && !selected
-        ? allTrips.map((detail, index) => <TripEntry key={index} tripDetails={detail} setSelect={setSelect} />)
-        : renderSelected()}
-    </div>
+    <>
+    {allTrips && !selected
+      ? (
+        <div id="trips">
+          {allTrips.map((detail, index) => <TripEntry key={index} tripDetails={detail} setSelect={setSelect} />)}
+        </div>
+      )
+      : renderSelected()}
+    </>
   )
 };
 

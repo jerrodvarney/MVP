@@ -4,7 +4,6 @@ import FlightList from './FlightList.jsx';
 
 const TripDetails = ({ tripData, setSelect }) => {
 
-  console.log(tripData)
   return (
     <div id="details">
       <div
@@ -28,7 +27,6 @@ const TripDetails = ({ tripData, setSelect }) => {
       </div>
     </div>
   )
-
 };
 
 export default TripDetails;
